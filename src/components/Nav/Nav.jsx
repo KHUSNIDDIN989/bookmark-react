@@ -1,10 +1,20 @@
-import "./Nav.css"
+import { useState } from "react"
+
 import Logo from "../assets/images/home-page/Group 193.png"
 import Search from "../assets/images/home-page/search.png"
 import Star from "../assets/images/home-page/star.png"
+
+import "./Nav.css"
 function Nav() {
+    const [dark, setDark] = useState("light") 
+    const [drk, setDrk] = useState(false) 
+    console.log(dark);
+
+    function setDarkFunc(e) {
+        setDark("dark")
+    }
     return(
-        <nav className="nav">
+        <nav className={`nav ${dark}`}>
             <div className="nav-logo">
                 <img src={Logo} alt="logo" className="nav-logo__img" />
             </div>
@@ -15,11 +25,11 @@ function Nav() {
                 </label>
             </div>
             <div className="nav-logout">
-                <img src={Star} alt="star" className="nav-logout__img" />
+                <img onClick={() => setDarkFunc()} src={Star} alt="star" className="nav-logout__img" />
                 <button type="submit" className="nav-logout__btn">LOGOUT</button>
             </div>
         </nav>
-    )
+)
 }
 
 export default Nav

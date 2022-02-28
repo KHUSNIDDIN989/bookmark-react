@@ -1,7 +1,12 @@
 .nav {
     border-bottom: 1px solid #eee;
   }
-  
+  .dark{
+    background: #000;
+  }
+  .light{
+    background: #fff;
+  }
   .nav .nav-logo .nav-logo__img {
     position: absolute;
     width: 226px;
