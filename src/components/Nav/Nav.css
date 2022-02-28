@@ -1,9 +1,7 @@
 .nav {
     border-bottom: 1px solid #eee;
   }
-  .dark{
-    background: #000;
-  }
+  
   .light{
     background: #fff;
   }
@@ -22,7 +20,7 @@
     border-radius: 30px;
     display: flex;
     justify-content: space-between;
-    margin: 12px 0 12px 350px;
+    margin: 12px 0;
     position: relative;
     z-index: 199;
   }

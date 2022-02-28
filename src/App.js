@@ -11,7 +11,7 @@ function App() {
   let search = "java";
   const [data, setData] = useState([])
   useEffect(() => {
-  fetch( `https://www.googleapis.com/books/v1/volumes?q=${search}+terms`)
+  fetch( `https://www.googleapis.com/books/v1/volumes?q=${search}&orderBy=newest`)
         .then(res => res.json())
         .then(data => setData(data))
   }, [])
